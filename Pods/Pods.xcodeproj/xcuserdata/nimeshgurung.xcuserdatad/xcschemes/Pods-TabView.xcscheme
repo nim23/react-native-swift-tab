@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "942485471E0B2B3B00274E12"
-               BuildableName = "TabView.app"
-               BlueprintName = "TabView"
-               ReferencedContainer = "container:TabView.xcodeproj">
+               BlueprintIdentifier = "19A2971EF660365625737A11549EFCCC"
+               BuildableName = "Pods_TabView.framework"
+               BlueprintName = "Pods-TabView"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "942485471E0B2B3B00274E12"
-            BuildableName = "TabView.app"
-            BlueprintName = "TabView"
-            ReferencedContainer = "container:TabView.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "942485471E0B2B3B00274E12"
-            BuildableName = "TabView.app"
-            BlueprintName = "TabView"
-            ReferencedContainer = "container:TabView.xcodeproj">
+            BlueprintIdentifier = "19A2971EF660365625737A11549EFCCC"
+            BuildableName = "Pods_TabView.framework"
+            BlueprintName = "Pods-TabView"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "942485471E0B2B3B00274E12"
-            BuildableName = "TabView.app"
-            BlueprintName = "TabView"
-            ReferencedContainer = "container:TabView.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
