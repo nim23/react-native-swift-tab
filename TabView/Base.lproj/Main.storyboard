@@ -41,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="zxG-ui-mI1"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="zxG-ui-mI1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXZ-Pb-AM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
