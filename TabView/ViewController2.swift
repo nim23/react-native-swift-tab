@@ -9,14 +9,12 @@
 import UIKit
 import React
 
-class ViewController2: UIViewController {
+class ViewController2: UIViewController, ReactViewInstantiate {
 
-    var view2: RCTRootView!
+    var reactView: RCTRootView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view2 = ReactModule.sharedInstance.viewForModule(module: "App", initialProperties: ["route": "routeNameView2"])
-        self.view.addSubview(view2)
-        view2.frame = self.view.bounds
-    }
+		self.instantiateReactView(view: "view2", props: ["route": "routeNameView2"])
+	}
 }
