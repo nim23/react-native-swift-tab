@@ -15,12 +15,7 @@ class ViewController1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view1 = RCTRootView(
-            bundleURL: URL(string: "http://localhost:8081/index.ios.bundle?platform=ios"),
-            moduleName: "View1",
-            initialProperties: nil,
-            launchOptions: nil
-        )
+        view1 = ReactModule.sharedInstance.viewForModule(module: "App", initialProperties: ["route": "routeNameView1"])
         self.view.addSubview(view1)
         view1.frame = self.view.bounds
     }

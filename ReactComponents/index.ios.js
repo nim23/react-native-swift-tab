@@ -1,38 +1,41 @@
 'use strict'
 
-import React, {
-  Component
-} from 'react'
-import ReactNative, {
+import React, { Component } from 'react'
+import { 
   AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  Navigator
 } from 'react-native'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'green'
-  },
-  text: {
-    fontSize: 24,
-    color: 'black'
-  }
-})
+const View1 = require('./Components/View1')
+const View2 = require('./Components/View2')
 
-class ReactNativeExample extends Component {
+const RouteStack = {
+  routeNameView1: View1,
+  routeNameView2: View2
+}
+
+class App extends Component {
+
+  constructor(props) {
+    super(props)
+    console.log('initializing')
+  }
+  
+  _renderScene(route, navigator) {
+    const Component = route.component
+    return <Component />
+  }
+
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.text}>
-         Yo React Native Here!!
-        </Text>
-      </View>
-    )
+    const component = RouteStack[this.props.route]
+    const props = this.props
+
+    return (<Navigator
+      ref='navigator'
+      initialRoute={{component, props}}
+      renderScene={this._renderScene.bind(this)}
+    />)
   }
 }
 
-AppRegistry.registerComponent('View1', () => ReactNativeExample)
+AppRegistry.registerComponent('App', () => App)

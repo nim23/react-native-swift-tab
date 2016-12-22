@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D07D89EECFE2419160CB86D /* Pods_TabView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC81AD61597A0808E3BC1BEA /* Pods_TabView.framework */; };
 		940CAA541E0BBCEA00262C67 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CAA531E0BBCEA00262C67 /* ViewController1.swift */; };
+		940CAA561E0BCC2700262C67 /* ReactModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CAA551E0BCC2700262C67 /* ReactModule.swift */; };
+		940CAA581E0BD84A00262C67 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CAA571E0BD84A00262C67 /* ViewController2.swift */; };
 		9424854C1E0B2B3B00274E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9424854B1E0B2B3B00274E12 /* AppDelegate.swift */; };
 		9424854E1E0B2B3B00274E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9424854D1E0B2B3B00274E12 /* ViewController.swift */; };
 		942485511E0B2B3B00274E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9424854F1E0B2B3B00274E12 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		88DB39C1906D63ECE6D17306 /* Pods-TabView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabView/Pods-TabView.release.xcconfig"; sourceTree = "<group>"; };
 		940CAA531E0BBCEA00262C67 /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		940CAA551E0BCC2700262C67 /* ReactModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactModule.swift; path = ../ReactModule.swift; sourceTree = "<group>"; };
+		940CAA571E0BD84A00262C67 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		942485481E0B2B3B00274E12 /* TabView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9424854B1E0B2B3B00274E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9424854D1E0B2B3B00274E12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				940CAA531E0BBCEA00262C67 /* ViewController1.swift */,
+				940CAA571E0BD84A00262C67 /* ViewController2.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 			children = (
 				940CAA501E0BBCB500262C67 /* Controllers */,
 				9424854B1E0B2B3B00274E12 /* AppDelegate.swift */,
+				940CAA551E0BCC2700262C67 /* ReactModule.swift */,
 				9424854D1E0B2B3B00274E12 /* ViewController.swift */,
 				9424854F1E0B2B3B00274E12 /* Main.storyboard */,
 				942485521E0B2B3B00274E12 /* Assets.xcassets */,
@@ -222,7 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940CAA581E0BD84A00262C67 /* ViewController2.swift in Sources */,
 				940CAA541E0BBCEA00262C67 /* ViewController1.swift in Sources */,
+				940CAA561E0BCC2700262C67 /* ReactModule.swift in Sources */,
 				9424854E1E0B2B3B00274E12 /* ViewController.swift in Sources */,
 				9424854C1E0B2B3B00274E12 /* AppDelegate.swift in Sources */,
 			);
