@@ -16,6 +16,8 @@
 		942485531E0B2B3B00274E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942485521E0B2B3B00274E12 /* Assets.xcassets */; };
 		942485561E0B2B3B00274E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942485541E0B2B3B00274E12 /* LaunchScreen.storyboard */; };
 		94CAEE1E1E0BFCC300F3E960 /* ReactViewInstantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAEE1D1E0BFCC300F3E960 /* ReactViewInstantiate.swift */; };
+		94CAEE211E0C29F100F3E960 /* TabViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAEE201E0C29F100F3E960 /* TabViewManager.swift */; };
+		94CAEE241E0C394800F3E960 /* TabViewManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CAEE231E0C394800F3E960 /* TabViewManagerBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		942485551E0B2B3B00274E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		942485571E0B2B3B00274E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94CAEE1D1E0BFCC300F3E960 /* ReactViewInstantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactViewInstantiate.swift; sourceTree = "<group>"; };
+		94CAEE201E0C29F100F3E960 /* TabViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewManager.swift; sourceTree = "<group>"; };
+		94CAEE231E0C394800F3E960 /* TabViewManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewManagerBridge.m; sourceTree = "<group>"; };
 		BC81AD61597A0808E3BC1BEA /* Pods_TabView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB1B150C80AEA2E56DE4725 /* Pods-TabView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabView/Pods-TabView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +88,9 @@
 		9424854A1E0B2B3B00274E12 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
-				94CAEE1C1E0BFC9800F3E960 /* protocols */,
+				94CAEE221E0C38C300F3E960 /* Bridges */,
+				94CAEE1F1E0C29C400F3E960 /* Managers */,
+				94CAEE1C1E0BFC9800F3E960 /* Protocols */,
 				940CAA501E0BBCB500262C67 /* Controllers */,
 				9424854B1E0B2B3B00274E12 /* AppDelegate.swift */,
 				940CAA551E0BCC2700262C67 /* ReactModule.swift */,
@@ -96,12 +102,28 @@
 			path = TabView;
 			sourceTree = "<group>";
 		};
-		94CAEE1C1E0BFC9800F3E960 /* protocols */ = {
+		94CAEE1C1E0BFC9800F3E960 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				94CAEE1D1E0BFCC300F3E960 /* ReactViewInstantiate.swift */,
 			);
-			name = protocols;
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		94CAEE1F1E0C29C400F3E960 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				94CAEE201E0C29F100F3E960 /* TabViewManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		94CAEE221E0C38C300F3E960 /* Bridges */ = {
+			isa = PBXGroup;
+			children = (
+				94CAEE231E0C394800F3E960 /* TabViewManagerBridge.m */,
+			);
+			name = Bridges;
 			sourceTree = "<group>";
 		};
 		ED9E85EDA95808B194219322 /* Pods */ = {
@@ -148,6 +170,7 @@
 				TargetAttributes = {
 					942485471E0B2B3B00274E12 = {
 						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -239,7 +262,9 @@
 				940CAA581E0BD84A00262C67 /* ViewController2.swift in Sources */,
 				94CAEE1E1E0BFCC300F3E960 /* ReactViewInstantiate.swift in Sources */,
 				940CAA541E0BBCEA00262C67 /* ViewController1.swift in Sources */,
+				94CAEE241E0C394800F3E960 /* TabViewManagerBridge.m in Sources */,
 				940CAA561E0BCC2700262C67 /* ReactModule.swift in Sources */,
+				94CAEE211E0C29F100F3E960 /* TabViewManager.swift in Sources */,
 				9424854C1E0B2B3B00274E12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,10 +389,12 @@
 			baseConfigurationReference = CAB1B150C80AEA2E56DE4725 /* Pods-TabView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TabView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beast.TabView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -377,6 +404,7 @@
 			baseConfigurationReference = 88DB39C1906D63ECE6D17306 /* Pods-TabView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TabView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beast.TabView;

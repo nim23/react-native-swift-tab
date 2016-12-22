@@ -9,9 +9,9 @@ target 'TabView' do
     'Core',
     'RCTText',
     'RCTNetwork',
-    'RCTWebSocket'
+    'RCTWebSocket', 
+    'RCTImage', 
+    'RCTAnimation'
   ]
-
-  # Pods for TabView
 
 end

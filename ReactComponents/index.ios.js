@@ -18,12 +18,12 @@ class App extends Component {
 
   constructor(props) {
     super(props)
-    console.log('initializing')
+    this._renderScene = this._renderScene.bind(this)
   }
   
   _renderScene(route, navigator) {
     const Component = route.component
-    return <Component />
+    return <Component {...this.props}/>
   }
 
   render() {
@@ -33,7 +33,7 @@ class App extends Component {
     return (<Navigator
       ref='navigator'
       initialRoute={{component, props}}
-      renderScene={this._renderScene.bind(this)}
+      renderScene={this._renderScene}
     />)
   }
 }
